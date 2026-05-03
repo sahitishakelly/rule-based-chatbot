@@ -1,0 +1,49 @@
+import datetime
+
+def chatbot_response(user_input):
+    user_input = user_input.lower()
+
+    if any(word in user_input for word in ["hi", "hello", "hey"]):
+        return "Hello! How can I help you?"
+
+    elif "how are you" in user_input:
+        return "I'm just a bot, but I'm doing great!"
+
+    elif "help" in user_input:
+        return "I can answer questions about AI, chat with you, or assist with basic queries."
+
+    elif "what is ai" in user_input:
+        return "AI stands for Artificial Intelligence. It allows machines to learn and make decisions."
+
+    elif "machine learning" in user_input:
+        return "Machine Learning is a subset of AI that enables systems to learn from data."
+
+    elif "your name" in user_input:
+        return "I am a simple rule-based chatbot."
+
+    elif "bye" in user_input:
+        return "Goodbye! Have a nice day!"
+
+    else:
+        return "Sorry, I don't understand that."
+
+def log_chat(user, bot):
+    with open("chat_log.txt", "a") as file:
+        time = datetime.datetime.now()
+        file.write(f"{time} - You: {user}\n")
+        file.write(f"{time} - Bot: {bot}\n")
+
+def run_chatbot():
+    print("Chatbot: Hello! Type 'bye' to exit.")
+    
+    while True:
+        user_input = input("You: ")
+        response = chatbot_response(user_input)
+        
+        print("Chatbot:", response)
+        log_chat(user_input, response)
+        
+        if "bye" in user_input.lower():
+            break
+
+run_chatbot()
