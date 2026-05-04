@@ -1,2 +1,25 @@
-# rule-based-chatbot
-Here’s a more **natural, human-like version (within ~350 characters):**  I built a simple chatbot using Python that can handle greetings, small talk, and basic AI-related questions. It uses pattern matching to understand user input and gives relevant responses. I also added chat logging and a modular structure so it can be easily expanded later.
+# Rule-Based Chatbot
+
+## Description
+This project is a simple rule-based chatbot built using Python. It uses regular expressions to detect user intent and respond accordingly. The chatbot can handle greetings, small talk, help queries, and basic AI-related questions.
+
+## Features
+- Intent-based response system using regex
+- Handles greetings, help, and domain-specific queries
+- Interactive console chatbot
+- Logs conversation history to a file
+
+## How It Works
+The chatbot matches user input with predefined patterns to identify intent and returns a suitable response.
+
+## How to Run
+1. Install Python
+2. Run the file:
+   python chatbot.py
+
+## Example
+You: hi  
+Bot: Hello! How can I assist you today?
+
+You: what is ai  
+Bot: AI stands for Artificial Intelligence, enabling machines to mimic human intelligence.
